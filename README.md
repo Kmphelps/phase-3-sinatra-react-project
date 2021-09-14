@@ -1,4 +1,7 @@
 # volunteerback
+
+Pitch: Volunteer Work Manager (name tbd) is a website that allows users to input volunteer work opportunity information which is then displayed on the website in categories. Users can select an opportunity and submit their name and contact information in order to sign up. 
+
 (Create - post) Form: Create a volunteer work opportunity with title, category, date/time, location, description, maybe an image
   - An opportunity can be tagged with a Category, so that each opportunity belongs to a category and each category has many opportunities.
   - Each category would have many volunteers
