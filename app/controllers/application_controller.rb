@@ -1,11 +1,11 @@
  require_relative "./opportunity_controller"
  require_relative "./volunteer_controller"
- require_relative "./category_controller"
+ require_relative "./signup_controller"
 
  class ApplicationController < Sinatra::Base
   use OpportunityController
   use VolunteerController
-  use CategoryController
+  use SignupController
 
   set :default_content_type, 'application/json'
   

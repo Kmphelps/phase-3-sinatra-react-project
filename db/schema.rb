@@ -10,22 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_15_175641) do
-
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-  end
+ActiveRecord::Schema.define(version: 2021_09_15_193720) do
 
   create_table "opportunities", force: :cascade do |t|
     t.string "title"
     t.string "location"
     t.string "description"
     t.string "img"
-    t.integer "category_id"
     t.string "date"
     t.string "time"
     t.string "org_name"
+    t.string "category"
+  end
+
+  create_table "signups", force: :cascade do |t|
     t.integer "volunteer_id"
+    t.integer "opportunity_id"
   end
 
   create_table "volunteers", force: :cascade do |t|

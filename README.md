@@ -59,13 +59,15 @@ Pitch: Volunteer Work Manager (name tbd) is a website that allows users to input
 
   ## Models
   
-  An Opportunity belongs to a Volunteer, and an Opportunity belongs to a Category
-  A Volunteer has many Opportunities, and a Volunteer has many Categories through Opportunities
-  A Category has many Opportunities, and a Category has many Volunteers through Opportunities
+  A SignUp belongs to an Opportunity, and a Signup belongs to a Volunteer
+  A Volunteer has many Opportunities, and a Volunteer has many SignUps through Opportunities
+  An Opportunity has many Volunteers, and an Opportunity has many SignUps through Volunteers
 
-  ` Volunteer -< Opportunity >- Category `
 
-  ### Volunteer
+` Opportunity -< SignUp >- Volunteer `
+
+
+  ### Volunteers
 
   | Field | Type   |
   | ----- | -----  | 
@@ -73,14 +75,15 @@ Pitch: Volunteer Work Manager (name tbd) is a website that allows users to input
   | phone | string |
 
 
-  ### Category
+  ### SignUps
 
-  | Field | Type   |
-  | ----- | -----  | 
-  | name  | string |
+  | Field          | Type    |
+  | -----          | -----   | 
+  | volunteer_id   | integer |
+  | opportunity_id | integer |
 
   
-  ### Opportunity
+  ### Opportunities
 
   | Field        | Type   |
   | -----        | -----  | 
@@ -91,6 +94,5 @@ Pitch: Volunteer Work Manager (name tbd) is a website that allows users to input
   | location     | string | 
   | description  | string | 
   | img          | string | 
-  | volunteer_id | integer| 
-  | category_id  | integer| 
+  | category     | string | 
 
