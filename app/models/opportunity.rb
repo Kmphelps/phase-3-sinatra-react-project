@@ -1,5 +1,5 @@
 class Opportunity < ActiveRecord::Base
-    has_many :volunteers
+    belongs_to :volunteer
     belongs_to :category
     
     def print_all_volunteers

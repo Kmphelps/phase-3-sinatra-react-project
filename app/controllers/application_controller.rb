@@ -1,9 +1,13 @@
+ require_relative "./opportunity_controller"
+
 class ApplicationController < Sinatra::Base
+  use OpportunityController
+
   set :default_content_type, 'application/json'
   
-  # Add your routes here
+
   get "/" do
-    { message: "Good luck with your project!" }.to_json
+    { message: "Placeholder!" }.to_json
   end
 
 end
