@@ -13,10 +13,10 @@ category3 = Category.create(name: "Feed the Hungry")
 category4 = Category.create(name: "Raise Money")
 
 puts "Creating volunteers..."
-user1 = Volunteer.create(name: "Mariya Rojano", phone: 619-123-4567)
-user2 = Volunteer.create(name: "Blake Thomas", phone: 659-673-4527)
-user3 = Volunteer.create(name: "Mike Brown", phone: 339-183-4567)
-user4 = Volunteer.create(name: "Sandra Reynolds", phone: 613-423-4467)
+user1 = Volunteer.create(name: "Mariya Rojano", phone: "619-123-4567")
+user2 = Volunteer.create(name: "Blake Thomas", phone: "659-673-4527")
+user3 = Volunteer.create(name: "Mike Brown", phone: "339-183-4567")
+user4 = Volunteer.create(name: "Sandra Reynolds", phone: "613-423-4467")
 
 puts "Creating opportunities..."
 opp1 = Opportunity.create(title: "Volunteer to Clean Torrey Pines Beach", org_name: "Love Our Beaches", date: "2021-10-02", time: "10:00 AM PST", location: "Torrey Pines State Beach", description: "Don't forget to bring sunscreen and trashbags", img: "https://cdn.shopify.com/s/files/1/0996/1022/files/getinvolved-covidmodule_68a5702c-a234-4c42-9dc8-bba55fbbf489_1600x.jpg?v=1592568876", volunteer_id: user1.id, category_id: category1.id)

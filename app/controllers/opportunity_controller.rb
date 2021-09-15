@@ -7,5 +7,4 @@ class OpportunityController < Sinatra::Base
     get "/opportunity/:id" do
         Opportunity.find(params[:id]).to_json
     end
-  
   end
