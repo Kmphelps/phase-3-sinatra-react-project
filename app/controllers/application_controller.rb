@@ -5,7 +5,7 @@
  class ApplicationController < Sinatra::Base
   use OpportunityController
   use VolunteerController
-  use SignupController
+  
 
   set :default_content_type, 'application/json'
   

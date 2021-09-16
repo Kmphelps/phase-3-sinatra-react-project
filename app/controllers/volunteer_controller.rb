@@ -12,7 +12,8 @@ class VolunteerController < Sinatra::Base
     post "/volunteers" do
       Volunteer.create(
         name: params[:name], 
-        phone: params[:phone]).to_json
+        phone: params[:phone],
+        opportunity_id: params[:opportunity_id]).to_json
     end
 
     delete "/volunteer/:id" do
