@@ -12,4 +12,13 @@ class SignupController < Sinatra::Base
     post "/signups" do
       Signup.create(volunteer_id:params[:volunteer_id], opportunity_id:params[:opportunity_id]).to_json
     end
+
+    delete "/signup/:id" do
+      signup = Signup.find(params[:id])
+      signup.destroy
+      signup.to_json
+    end
+
+    # Patch is not applicable to this controller because can only update the volunteer and opportunity ids
+
   end
