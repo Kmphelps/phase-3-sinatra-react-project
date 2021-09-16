@@ -2,11 +2,11 @@ class OpportunityController < Sinatra::Base
   set :default_content_type, 'application/json'
 
     get "/opportunities" do
-      Opportunity.all.to_json
+      Opportunity.all.to_json(include: :volunteers)
     end
 
     get "/opportunity/:id" do
-        Opportunity.find(params[:id]).to_json
+        Opportunity.find(params[:id]).to_json(include: :volunteers)
     end
 
     post "/opportunities" do
